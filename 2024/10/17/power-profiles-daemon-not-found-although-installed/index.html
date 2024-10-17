@@ -19,15 +19,15 @@
   <meta name="author" content="Apricityx">
   <meta name="keywords" content="">
   
-    <meta name="description" content="SDDM黑屏问题 问题表现：SDDM在X11下启动后黑屏，只有左上角光标闪烁  环境  操作系统：Arch Linux 显卡：NVIDIA GeForce RTX 4060 laptop | AMD Radeon 610M 双显卡 驱动：NVIDIA 560.35 | xf86-video-amdgpu 桌面环境：KDE Plasma 6.2.1 on wayland   思路&amp;解决方案">
+    <meta name="description" content="Power Profiles Daemon已安装的情况下，KDE仍然提示未安装 问题表现 Pacman已安装power-profiles-daemon，但KDE仍然提示未安装 检查是否安装 1pacman -Q | grep power-profiles-daemon 输出 123❯ pacman -Q | grep power-profiles-daemonpower-profiles-daem">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决：Archlinux启动电脑后黑屏，无法进入SDDM">
-<meta property="og:url" content="https://apricityx.github.io/2024/10/16/sddm-black-screen/index.html">
+<meta property="og:title" content="Power Profiles Daemon已安装的情况下，KDE仍然提示未安装">
+<meta property="og:url" content="https://apricityx.github.io/2024/10/17/power-profiles-daemon-not-found-although-installed/index.html">
 <meta property="og:site_name" content="Apricityx&#39;s blog">
-<meta property="og:description" content="SDDM黑屏问题 问题表现：SDDM在X11下启动后黑屏，只有左上角光标闪烁  环境  操作系统：Arch Linux 显卡：NVIDIA GeForce RTX 4060 laptop | AMD Radeon 610M 双显卡 驱动：NVIDIA 560.35 | xf86-video-amdgpu 桌面环境：KDE Plasma 6.2.1 on wayland   思路&amp;解决方案">
+<meta property="og:description" content="Power Profiles Daemon已安装的情况下，KDE仍然提示未安装 问题表现 Pacman已安装power-profiles-daemon，但KDE仍然提示未安装 检查是否安装 1pacman -Q | grep power-profiles-daemon 输出 123❯ pacman -Q | grep power-profiles-daemonpower-profiles-daem">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-16T06:33:37.000Z">
-<meta property="article:modified_time" content="2024-10-16T07:09:09.738Z">
+<meta property="article:published_time" content="2024-10-17T02:46:20.000Z">
+<meta property="article:modified_time" content="2024-10-17T03:10:35.092Z">
 <meta property="article:author" content="Apricityx">
 <meta property="article:tag" content="LINUX">
 <meta property="article:tag" content="FIX">
@@ -35,7 +35,7 @@
   
   
   
-  <title>解决：Archlinux启动电脑后黑屏，无法进入SDDM | Apricityx&#39;s blog</title>
+  <title>Power Profiles Daemon已安装的情况下，KDE仍然提示未安装 | Apricityx&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -226,7 +226,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">解决：Archlinux启动电脑后黑屏，无法进入SDDM</span>
+            <span id="subtitle">Power Profiles Daemon已安装的情况下，KDE仍然提示未安装</span>
           
         </div>
 
@@ -242,8 +242,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-16 14:33" pubdate>
-          2024年10月16日 下午
+        <time datetime="2024-10-17 10:46" pubdate>
+          2024年10月17日 上午
         </time>
       </span>
     
@@ -254,7 +254,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          314 字
+          153 字
         
       </span>
     
@@ -265,7 +265,7 @@
         
         
         
-          3 分钟
+          2 分钟
         
       </span>
     
@@ -311,12 +311,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">解决：Archlinux启动电脑后黑屏，无法进入SDDM</h1>
+            <h1 id="seo-header">Power Profiles Daemon已安装的情况下，KDE仍然提示未安装</h1>
             
               <p id="updated-time" class="note note-warning" style="display: none">
                 
                   
-                    本文最后更新于 2024-10-16T15:09:09+08:00
+                    本文最后更新于 2024-10-17T11:10:35+08:00
                   
                   
 
@@ -326,42 +326,21 @@
             
               <div class="markdown-body">
                 
-                <h1 id="sddm黑屏问题">SDDM黑屏问题</h1>
-<h3
-id="问题表现sddm在x11下启动后黑屏只有左上角光标闪烁">问题表现：SDDM在X11下启动后黑屏，只有左上角光标闪烁</h3>
-<blockquote>
-<p>环境</p>
-<ul>
-<li>操作系统：Arch Linux</li>
-<li>显卡：NVIDIA GeForce RTX 4060 laptop | AMD Radeon 610M 双显卡</li>
-<li>驱动：NVIDIA 560.35 | xf86-video-amdgpu</li>
-<li>桌面环境：KDE Plasma 6.2.1 on wayland</li>
-</ul>
-</blockquote>
-<h3 id="思路解决方案">思路&amp;解决方案</h3>
-<p>sddm正常启动的前提条件：</p>
-<ol type="1">
-<li>Xorg服务正常启动</li>
-<li>显卡驱动正常加载</li>
-<li>Dbus服务正常启动</li>
-<li>sddm服务正常启动</li>
-</ol>
-<p>按Ctrl+Alt+F3进入tty3，登录后检查Xorg运行状态：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">xdpyinfo<br></code></pre></td></tr></table></figure>
-<p>发现输出Unable to open display ""，说明Xorg服务未正常启动</p>
-<p>怀疑是NVIDIA驱动出现问题</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nvidia-smi<br></code></pre></td></tr></table></figure>
-<p>Result:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs bash">Wed Oct 16 14:46:21 2024       <br>+-----------------------------------------------------------------------------------------+<br>| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version: 12.6     |<br>|-----------------------------------------+------------------------+----------------------+<br>| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |<br>| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |<br>|                                         |                        |               MIG M. |<br>|=========================================+========================+======================|<br>|   0  NVIDIA GeForce RTX 4060 ...    On  |   00000000:01:00.0 Off |                  N/A |<br>| N/A   41C    P3             10W /   80W |      15MiB /   8188MiB |      6%      Default |<br>|                                         |                        |                  N/A |<br>+-----------------------------------------+------------------------+----------------------+<br>                                                                                         <br>+-----------------------------------------------------------------------------------------+<br>| Processes:                                                                              |<br>|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |<br>|        ID   ID                                                               Usage      |<br>|=========================================================================================|<br>|    0   N/A  N/A      1196      G   /usr/lib/Xorg                                   4MiB |<br>+-----------------------------------------------------------------------------------------+<br></code></pre></td></tr></table></figure>
-<p>输出正常，说明驱动正常加载</p>
-<p>怀疑是Xorg配置文件出现问题，尝试删除配置文件重新生成</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">rm</span> /etc/X11/xorg.conf<br><span class="hljs-built_in">sudo</span> nvidia-xconfig<br><span class="hljs-built_in">sudo</span> reboot<br></code></pre></td></tr></table></figure>
-<p>重启后问题依旧，尝试使用Xorg生成而不是NVIDIA生成的配置文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">rm</span> /etc/X11/xorg.conf<br><span class="hljs-built_in">sudo</span> reboot<br></code></pre></td></tr></table></figure>
-<p>重启后问题成功解决
-分析：Xorg配置文件在执行<code>sudo pacman -Syu xorg</code>后出现问题，删除后重新生成即可解决
-NVIDIA生成的配置文件有问题，别用<code>nvidia-xconfig</code>生成 <del>FKU
-NVIDIA</del></p>
+                <h1 id="power-profiles-daemon已安装的情况下kde仍然提示未安装">Power
+Profiles Daemon已安装的情况下，KDE仍然提示未安装</h1>
+<h2 id="问题表现">问题表现</h2>
+<p>Pacman已安装<code>power-profiles-daemon</code>，但KDE仍然提示未安装</p>
+<h2 id="检查是否安装">检查是否安装</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pacman -Q | grep power-profiles-daemon<br></code></pre></td></tr></table></figure>
+<p>输出</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">❯ pacman -Q | grep power-profiles-daemon<br><br>power-profiles-daemon 0.23-1<br></code></pre></td></tr></table></figure>
+<h2 id="尝试">尝试</h2>
+<p>重启桌面环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">killall plasmashell &amp;&amp; kstart5 plasmashell<br></code></pre></td></tr></table></figure>
+<p>发现KDE提示已安装，可以选择电源模式</p>
+<p>导致这个问题的原因是<code>power-profiles-daemon</code>服务晚于KDE启动，导致KDE无法检测到服务的存在。重启桌面环境后，KDE重新检测服务后问题解决</p>
+<h2 id="解决方案">解决方案</h2>
+<p>需要编辑电源管理时重启桌面环境即可</p>
 
                 
               </div>
@@ -388,8 +367,8 @@ NVIDIA</del></p>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>解决：Archlinux启动电脑后黑屏，无法进入SDDM</div>
-      <div>https://apricityx.github.io/2024/10/16/sddm-black-screen/</div>
+      <div>Power Profiles Daemon已安装的情况下，KDE仍然提示未安装</div>
+      <div>https://apricityx.github.io/2024/10/17/power-profiles-daemon-not-found-although-installed/</div>
     </div>
     <div class="license-meta">
       
@@ -401,7 +380,7 @@ NVIDIA</del></p>
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月16日</div>
+          <div>2024年10月17日</div>
         </div>
       
       
@@ -426,18 +405,12 @@ NVIDIA</del></p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/10/17/power-profiles-daemon-not-found-although-installed/" title="Power Profiles Daemon已安装的情况下，KDE仍然提示未安装">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Power Profiles Daemon已安装的情况下，KDE仍然提示未安装</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/10/16/install-dragon-well-on-linux/" title="在Linux上安装Dragon Well">
-                        <span class="hidden-mobile">在Linux上安装Dragon Well</span>
+                      <a href="/2024/10/16/sddm-black-screen/" title="解决：Archlinux启动电脑后黑屏，无法进入SDDM">
+                        <span class="hidden-mobile">解决：Archlinux启动电脑后黑屏，无法进入SDDM</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

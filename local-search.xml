@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>Power Profiles Daemon已安装的情况下，KDE仍然提示未安装</title>
+    <link href="/2024/10/17/power-profiles-daemon-not-found-although-installed/"/>
+    <url>/2024/10/17/power-profiles-daemon-not-found-although-installed/</url>
+    
+    <content type="html"><![CDATA[<h1 id="power-profiles-daemon已安装的情况下kde仍然提示未安装">PowerProfiles Daemon已安装的情况下，KDE仍然提示未安装</h1><h2 id="问题表现">问题表现</h2><p>Pacman已安装<code>power-profiles-daemon</code>，但KDE仍然提示未安装</p><h2 id="检查是否安装">检查是否安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pacman -Q | grep power-profiles-daemon<br></code></pre></td></tr></table></figure><p>输出</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">❯ pacman -Q | grep power-profiles-daemon<br><br>power-profiles-daemon 0.23-1<br></code></pre></td></tr></table></figure><h2 id="尝试">尝试</h2><p>重启桌面环境</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">killall plasmashell &amp;&amp; kstart5 plasmashell<br></code></pre></td></tr></table></figure><p>发现KDE提示已安装，可以选择电源模式</p><p>导致这个问题的原因是<code>power-profiles-daemon</code>服务晚于KDE启动，导致KDE无法检测到服务的存在。重启桌面环境后，KDE重新检测服务后问题解决</p><h2 id="解决方案">解决方案</h2><p>需要编辑电源管理时重启桌面环境即可</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>LINUX</tag>
+      
+      <tag>FIX</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>解决：Archlinux启动电脑后黑屏，无法进入SDDM</title>
     <link href="/2024/10/16/sddm-black-screen/"/>
     <url>/2024/10/16/sddm-black-screen/</url>
@@ -37,11 +58,11 @@
       
       <tag>DEPLOY</tag>
       
-      <tag>LINUX</tag>
-      
       <tag>JAVA</tag>
       
       <tag>DRAGON WELL</tag>
+      
+      <tag>LINUX</tag>
       
     </tags>
     
