@@ -19,21 +19,25 @@
   <meta name="author" content="Apricityx">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="1 前言 在本博文中，Java将被安装在 &#x2F;opt&#x2F;java&#x2F;dragonwell&#x2F; 目录下。如果您希望更改安装目录，请相应调整命令。 此外，这篇博文主要是为了记录自己的操作 看不懂就算了 2 Dragon Well的下载 选择以下两种下载方式的其中一种，推荐使用第二种： 2.1 方法一：懒人下载 首先，创建一个临时目录： 1mkdir &#x2F;temp1 进入临时目录： 1cd &#x2F;temp1 使用 w">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://apricityx.github.io/1970/01/01/hello-world/index.html">
+<meta property="og:title" content="在Linux上安装Dragon Well">
+<meta property="og:url" content="https://apricityx.github.io/2022/11/08/install-dragon-well-on-linux/index.html">
 <meta property="og:site_name" content="Apricityx&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="1 前言 在本博文中，Java将被安装在 &#x2F;opt&#x2F;java&#x2F;dragonwell&#x2F; 目录下。如果您希望更改安装目录，请相应调整命令。 此外，这篇博文主要是为了记录自己的操作 看不懂就算了 2 Dragon Well的下载 选择以下两种下载方式的其中一种，推荐使用第二种： 2.1 方法一：懒人下载 首先，创建一个临时目录： 1mkdir &#x2F;temp1 进入临时目录： 1cd &#x2F;temp1 使用 w">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="1970-01-01T00:00:00.000Z">
-<meta property="article:modified_time" content="2024-10-15T06:29:15.510Z">
+<meta property="article:published_time" content="2022-11-08T01:40:54.000Z">
+<meta property="article:modified_time" content="2024-10-18T00:28:00.895Z">
 <meta property="article:author" content="Apricityx">
+<meta property="article:tag" content="DEPLOY">
+<meta property="article:tag" content="JAVA">
+<meta property="article:tag" content="DRAGON WELL">
+<meta property="article:tag" content="LINUX">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World | Apricityx&#39;s blog</title>
+  <title>在Linux上安装Dragon Well | Apricityx&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -224,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Hello World</span>
+            <span id="subtitle">在Linux上安装Dragon Well</span>
           
         </div>
 
@@ -240,8 +244,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="1970-01-01 08:00" pubdate>
-          1970年1月1日 早上
+        <time datetime="2022-11-08 09:40" pubdate>
+          2022年11月8日 上午
         </time>
       </span>
     
@@ -252,7 +256,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18 字
+          451 字
         
       </span>
     
@@ -263,7 +267,7 @@
         
         
         
-          1 分钟
+          4 分钟
         
       </span>
     
@@ -309,12 +313,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">在Linux上安装Dragon Well</h1>
             
               <p id="updated-time" class="note note-warning" style="display: none">
                 
                   
-                    本文最后更新于 2024-10-15T14:29:15+08:00
+                    本文最后更新于 2024-10-18T08:28:00+08:00
                   
                   
 
@@ -324,29 +328,55 @@
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a
-target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h3 id="前言">1 前言</h3>
+<p>在本博文中，Java将被安装在 <code>/opt/java/dragonwell/</code>
+目录下。如果您希望更改安装目录，请相应调整命令。</p>
+<p>此外，这篇博文主要是为了记录自己的操作 <del>看不懂就算了</del></p>
+<h3 id="dragon-well的下载">2 Dragon Well的下载</h3>
+<p>选择以下两种下载方式的其中一种，推荐使用第二种：</p>
+<h4 id="方法一懒人下载">2.1 方法一：懒人下载</h4>
+<p>首先，创建一个临时目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> /temp1<br></code></pre></td></tr></table></figure>
+<p>进入临时目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /temp1<br></code></pre></td></tr></table></figure>
+<p>使用 <code>wget</code> 下载Dragon Well：</p>
+<p><strong>注意：请确认下载链接是否有效。如果无效，请查阅
+<code>wget</code>
+命令的用法，寻找可用的下载链接，或采用第二种下载方法。</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://dragonwell.oss-cn-shanghai.aliyuncs.com/17.0.4.0.4%2B8/Alibaba_Dragonwell_Standard_17.0.4.0.4%2B8_x64_linux.tar.gz<br></code></pre></td></tr></table></figure>
+<p>下载部分到此结束。</p>
+<h4 id="方法二常规下载">2.2 方法二：常规下载</h4>
+<p>您可以访问以下链接进行下载：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/alibaba/dragonwell17/releases"
+title="原下载地址">原下载地址</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://github.com/alibaba/dragonwell17/wiki/Mirrors-for-download-"
+title="镜像">镜像下载</a></li>
+</ul>
+<p>下载后请将文件上传至服务器的 <code>/temp1</code>
+目录（可以更改，但后续命令中请相应调整）。</p>
+<h3 id="正式安装">3 正式安装</h3>
+<h4 id="解压">3.1 解压</h4>
+<p>使用以下命令解压下载的文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -zxvf Alibaba_Dragonwell_Standard_17.0.4.0.4+8_x64_linux.tar.gz -C /opt/java/<br></code></pre></td></tr></table></figure>
+<h4 id="配置全局变量">3.2 配置全局变量</h4>
+<p>使用 <code>vim</code> 编辑用户的 <code>.bashrc</code> 文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim ~/.bashrc<br></code></pre></td></tr></table></figure>
+<h5 id="编辑-.bashrc">3.2.1 编辑 <code>.bashrc</code></h5>
+<p>在 <code>vim</code> 中，按 <code>i</code>
+进入编辑模式，然后粘贴以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> JAVA_HOME=/opt/java/dragonwell/dragonwell-17.0.4.0.4+8-GA<br><span class="hljs-built_in">export</span> CLASSPATH=.:<span class="hljs-variable">$&#123;JAVA_HOME&#125;</span>/lib/dt.jar:<span class="hljs-variable">$&#123;JAVA_HOME&#125;</span>/lib/tools.jar<br><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$&#123;JAVA_HOME&#125;</span>/bin:<span class="hljs-variable">$PATH</span><br></code></pre></td></tr></table></figure>
+<p>按 <code>Esc</code> 退出编辑模式，输入 <code>:wq</code>
+保存并退出。</p>
+<h5 id="刷新环境变量">3.2.2 刷新环境变量</h5>
+<p>使用以下命令刷新环境变量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> ~/.bashrc<br></code></pre></td></tr></table></figure>
+<p>至此，环境变量的配置已完成。</p>
+<h3 id="验证">4 验证</h3>
+<p>输入以下命令以验证Java是否安装成功：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java -version<br></code></pre></td></tr></table></figure>
+<p>如果输出中出现“Dragon Well”的字样，则表示安装成功。</p>
 
                 
               </div>
@@ -356,6 +386,19 @@ target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment
               <div class="post-metas my-3">
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/DEPLOY/" class="print-no-link">#DEPLOY</a>
+      
+        <a href="/tags/JAVA/" class="print-no-link">#JAVA</a>
+      
+        <a href="/tags/DRAGON-WELL/" class="print-no-link">#DRAGON WELL</a>
+      
+        <a href="/tags/LINUX/" class="print-no-link">#LINUX</a>
+      
+    </div>
+  
 </div>
 
 
@@ -364,8 +407,8 @@ target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>https://apricityx.github.io/1970/01/01/hello-world/</div>
+      <div>在Linux上安装Dragon Well</div>
+      <div>https://apricityx.github.io/2022/11/08/install-dragon-well-on-linux/</div>
     </div>
     <div class="license-meta">
       
@@ -377,7 +420,7 @@ target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>1970年1月1日</div>
+          <div>2022年11月8日</div>
         </div>
       
       
