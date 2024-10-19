@@ -19,25 +19,31 @@
   <meta name="author" content="Apricityx">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Hello Hexos">
+    <meta name="description" content="Hello Hexo">
 <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https://apricityx.github.io/about/index.html">
+<meta property="og:title" content="关于">
+<meta property="og:url" content="https://apricityx.github.io/about/">
 <meta property="og:site_name" content="Apricityx&#39;s blog">
-<meta property="og:description" content="Hello Hexos">
+<meta property="og:description" content="Hello Hexo">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-15T08:29:46.000Z">
-<meta property="article:modified_time" content="2024-10-15T08:30:23.590Z">
+<meta property="article:published_time" content="2024-10-19T07:31:29.260Z">
+<meta property="article:modified_time" content="2024-10-19T07:31:29.260Z">
 <meta property="article:author" content="Apricityx">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>about | Apricityx&#39;s blog</title>
+  <title>关于 | Apricityx&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -211,14 +217,14 @@
 
   
 
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+<div id="banner" class="banner" false
+     style="background: url('/img/bg-love.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">about</span>
+            <span id="subtitle">关于</span>
           
         </div>
 
@@ -240,18 +246,105 @@
         <div id="board"
           >
           
+            <div class="about-avatar">
+              <img src="/img/avatar.jpg" srcset="/img/loading.gif" lazyload class="img-fluid" alt="avatar">
+            </div>
+          
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
-<article class="page-content">
-  <h1 id="hello-hexos">Hello Hexos</h1>
+<div class="text-center">
+  <div class="about-info">
+    <div class="about-name">Apricityx</div>
+    <div class="about-intro">Have a nice day!</div>
+    <div class="about-icons">
+      
+        
+        
+        
+        <a href=https://github.com/apricityx/Apricityx.github.io class="
+           hint--bottom hint--rounded"
+           aria-label="GitHub"
+           target="_blank"
+        >
+          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href=https://qm.qq.com/q/pfJMYcqEgi class="
+           hint--bottom hint--rounded"
+           aria-label="QQ"
+           target="_blank"
+        >
+          <i class="iconfont icon-qq-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href=https://u.wechat.com/MAI6FxTvNXjQPSHYNLZwQEc?s=1 class="
+           hint--bottom hint--rounded"
+           aria-label="Wechat"
+           target="_blank"
+        >
+          <i class="iconfont icon-wechat-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href=https://steamcommunity.com/id/Apricityx_ class="
+           hint--bottom hint--rounded"
+           aria-label="Steam"
+           target="_blank"
+        >
+          <i class="iconfont icon-steam" aria-hidden="true"></i>
+          
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+<article class="about-content page-content mt-5">
+  <div class="markdown-body">
+    <h1 id="hello-hexo">Hello Hexo</h1>
+
+  </div>
+
+  
+</article>
+
+
+
 
 
   
 
-</article>
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
 
 
 
@@ -363,6 +456,59 @@
 
 
 
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
 
   <script defer src="/js/leancloud.js" ></script>
 

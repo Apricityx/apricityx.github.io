@@ -21,7 +21,7 @@
   
     <meta property="og:type" content="website">
 <meta property="og:title" content="友链">
-<meta property="og:url" content="https://apricityx.github.io/links/index.html">
+<meta property="og:url" content="https://apricityx.github.io/links/">
 <meta property="og:site_name" content="Apricityx&#39;s blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Apricityx">
@@ -207,7 +207,7 @@
 
   
 
-<div id="banner" class="banner" parallax=true
+<div id="banner" class="banner" false
      style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -300,6 +300,50 @@
 </div>
 
 
+
+
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"apricityx/Apricityx.github.io","repo-id":"R_kgDONBCqEQ","category":"General","category-id":"DIC_kwDONBCqEc4Cjf4g","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN","theme":"preferred_color_scheme"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
 
 
 
