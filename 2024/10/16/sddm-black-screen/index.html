@@ -157,7 +157,7 @@ btf.addGlobalFn('pjaxSend', () => {
   Pace.restart()
 }, 'pace_restart')
 
-</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/bg-404.jpg'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-circle-info"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Apricityx's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">Archlinux启动电脑后黑屏，无法进入SDDM</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-circle-info"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Archlinux启动电脑后黑屏，无法进入SDDM<a class="post-edit-link" href="https://github.com/apricityx/Apricityx.github.io/edit/main/source/_posts/sddm-black-screen.md" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-16T06:33:37.000Z" title="发表于 2024-10-16 14:33:37">2024-10-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-19T06:49:13.330Z" title="更新于 2024-10-19 14:49:13">2024-10-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/FIX/">FIX</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">388</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a class="disqusjs-comment-count" href="https://apricityx.github.io/2024/10/16/sddm-black-screen/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="sddm黑屏问题">SDDM黑屏问题</h1>
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/bg-404.jpg'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-circle-info"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Apricityx's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">Archlinux启动电脑后黑屏，无法进入SDDM</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-circle-info"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Archlinux启动电脑后黑屏，无法进入SDDM<a class="post-edit-link" href="https://github.com/apricityx/Apricityx.github.io/edit/main/source/_posts/sddm-black-screen.md" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-16T06:33:37.000Z" title="发表于 2024-10-16 14:33:37">2024-10-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-19T06:49:13.330Z" title="更新于 2024-10-19 14:49:13">2024-10-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/FIX/">FIX</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">388</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="sddm黑屏问题">SDDM黑屏问题</h1>
 <h3
 id="问题表现sddm在x11下启动后黑屏只有左上角光标闪烁">问题表现：SDDM在X11下启动后黑屏，只有左上角光标闪烁</h3>
 <blockquote>
@@ -286,8 +286,8 @@ NVIDIA</del></p>
     }
   }
 
-  if ('Disqusjs' === 'Disqusjs' || !false) {
-    if (false) btf.loadComment(document.getElementById('disqusjs-wrap'), loadDisqusjs)
+  if ('Disqusjs' === 'Disqusjs' || !true) {
+    if (true) btf.loadComment(document.getElementById('disqusjs-wrap'), loadDisqusjs)
     else {
       loadDisqusjs()
       GLOBAL_CONFIG_SITE.isPost && getCount()
@@ -334,98 +334,13 @@ NVIDIA</del></p>
 
   btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
 
-  if ('Disqusjs' === 'Giscus' || !false) {
-    if (false) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+  if ('Disqusjs' === 'Giscus' || !true) {
+    if (true) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
     else loadGiscus()
   } else {
     window.loadOtherComment= loadGiscus
   }
-})()</script></div><script>window.newestComments = {
-  changeContent: content => {
-    if (content === '') return content
-
-    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
-    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
-    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
-    content = content.replace(/<code>.*?<\/code>/gi, '[代码]') // replace code      
-    content = content.replace(/<[^>]+>/g, "") // remove html tag
-
-    if (content.length > 150) {
-      content = content.substring(0, 150) + '...'
-    }
-    return content
-  },
-
-  generateHtml: (array, ele) => {
-    let result = ''
-
-    if (array.length) {
-      for (let i = 0; i < array.length; i++) {
-        result += '<div class="aside-list-item">'
-
-        if (true && array[i].avatar) {
-          const imgAttr = 'data-lazy-src'
-          result += `<a href="${array[i].url}" class="thumbnail"><img ${imgAttr}="${array[i].avatar}" alt="${array[i].nick}"></a>`
-        }
-
-        result += `<div class="content">
-        <a class="comment" href="${array[i].url}" title="${array[i].content}">${array[i].content}</a>
-        <div class="name"><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
-        </div></div>`
-      }
-    } else {
-      result += '暂无评论'
-    }
-
-    ele.innerHTML = result
-    window.lazyLoadInstance && window.lazyLoadInstance.update()
-    window.pjax && window.pjax.refresh(ele)
-  },
-
-  newestCommentInit: (name, getComment) => {
-    const $dom = document.querySelector('#card-newest-comments .aside-list')
-    if ($dom) {
-      const data = btf.saveToLocal.get(name)
-      if (data) {
-        newestComments.generateHtml(JSON.parse(data), $dom)
-      } else {
-        getComment($dom)
-      }
-    }
-  },
-
-  run: (name, getComment) => {
-    newestComments.newestCommentInit(name, getComment)
-    btf.addGlobalFn('pjaxComplete', () => newestComments.newestCommentInit(name, getComment), name)
-  }
-}</script><script>window.addEventListener('load', () => {
-  const keyName = 'disqus-newest-comments'
-  const { changeContent, generateHtml, run } = window.newestComments
-
-  const getComment = ele => {
-    fetch('https://disqus.com/api/3.0/forums/listPosts.json?forum=apricityx-blog&related=thread&limit=6&api_key=H5FjwRJZoM3I3opfVggAbvXhzZ0Jx0rQJYdZaWyQrYUMBR9IrlC78GU6swbBrLg5')
-      .then(response => response.json())
-      .then(data => {
-        const disqusArray = data.response.map(item => {
-          return {
-            'avatar': item.author.avatar.cache,
-            'content': changeContent(item.message),
-            'nick': item.author.name,
-            'url': item.url,
-            'date': item.createdAt
-          }
-        })
-
-        btf.saveToLocal.set(keyName, JSON.stringify(disqusArray), 10/(60*24))
-        generateHtml(disqusArray, ele)
-      }).catch(e => {
-        console.error(e)
-        ele.textContent= "无法获取评论，请确认相关配置是否正确"
-      })
-  }
-
-  run(keyName, getComment)
-})</script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = true;
 document.body.addEventListener('input', POWERMODE);
